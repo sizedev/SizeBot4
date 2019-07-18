@@ -24,6 +24,7 @@
 * Convert command. [&convert <size> <new unit>]
 * Calculate command. [&calc <equation>] (use an API for this?)
 * "Set height such that" command. e.g.: "set height such that foot length = 1mi", or "set height such that my height = fingerprint depth of someone 500km tall" or "set height such that the hair of someone 6ft looks 50ft thick"
+* Even larger sizes (multiverses?)
 
 († indicate user-customizable)
 STATS:                       STATSNSFW:
@@ -56,11 +57,11 @@ FULL COMMAND LIST:
 &deletecharacter
 
 #Stats commands
-&stats <user>
+&stats <user/size>
 &statsnsfw <user>
-&statsraw [size]
-&compare [user1] <user2>
-&compareraw [size1] <size2>
+&statsraw [size] #Deprecated.
+&compare [user1/size1] <user2/size2>
+&compareraw [size1] <size2> #Deprecated.
 
 #Set commands
 &setheight [height]
