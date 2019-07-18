@@ -16,8 +16,8 @@ class DigiException(Exception):
 version = "0.0.1"
 
 # Defaults
-defaultheight = None  # TODO: Set to the new value/unit pairs
-defaultweight = None  # TODO: Set to the new value/unit pairs
+defaultheight = None  # TODO: Set to the new Size objects.
+defaultweight = None  # TODO: Set to the new Suze objects.
 defaultdensity = Decimal(1.0)
 
 

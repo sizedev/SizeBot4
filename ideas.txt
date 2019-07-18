@@ -2,10 +2,12 @@
 * Allow users to store character pictures.
 * Easier, step-by-step register process.
 * Oh God please fix the unit handling. (working on it)
+    - Switch to using Size objects.
 * Store user database in a database and not a fuckton of txt files.
 * Autostop option for slowchange.
 * Stop using async tasks for slowchange. (Store in a database and read from periodically?)
-* Change the way &slowchange works. [&slowchange <rate>] (spilt constant/spurt into seperate commands?)
+* Change the way &slowchange works. [&slowchange <rate>] 
+* Add &slowspurt [&slowspurt <rate> <interval>]
 * Auto-role for SizeBot Users.
 * Auto-role based on current size option. [optional for user]
 * Custom emojis trigger events.
@@ -13,7 +15,7 @@
     - Allow users to set minimum and maximum sizes of attributes for themselves.
 * Height gambling games (Poker? Uno? Deal or No Deal?)
 * Allow you to compare another user other than yourself with compareraw.
-* Allow expansions for various body parts [weight, foot, NSFW]
+* Allow expansions for various body parts [density, foot, NSFW]
 * Fix Unicode handling for nicknames.
 * Generate user "cards".
 * Switchable user profiles. [create characters, switch between them]
@@ -24,7 +26,9 @@
 * Convert command. [&convert <size> <new unit>]
 * Calculate command. [&calc <equation>] (use an API for this?)
 * "Set height such that" command. e.g.: "set height such that foot length = 1mi", or "set height such that my height = fingerprint depth of someone 500km tall" or "set height such that the hair of someone 6ft looks 50ft thick"
-* Even larger sizes (multiverses?)
+* Even larger sizes? (multiverses?)
+* Actually adhere to PEP8 formatting.
+* Combine &stats/&statsraw and &compare/&compareraw.
 
 († indicate user-customizable)
 STATS:                       STATSNSFW:
@@ -65,7 +69,7 @@ FULL COMMAND LIST:
 
 #Set commands
 &setheight [height]
-&setdensity [multiplier]
+&setdensity [multiplier/weight] [alias: &setweight]
 &setfoot [foot length]
 &sethair [hair length]
 &setboob [boob size]

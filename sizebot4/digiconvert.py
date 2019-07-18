@@ -1,7 +1,8 @@
 # Oh god, here we go.
 # DigiConvert is a "package" for converting units to other units,
 # mainly because I don't like any other unit conversion packages.
-# For now it's just going to be units the SizeBot uses but maybe I'll add more and make this public later.
+# For now it's just going to be units the SizeBot uses but maybe 
+# I'll add more and make this public later.
 
 import re
 from decimal import Decimal
@@ -9,9 +10,11 @@ from decimal import Decimal
 from sizebot4.globalsb4 import getnum, round_nearest_half, place_value
 
 
-# NOTE: A VUpair is a [Decimal/float, string] pair, where the first variable is the
-# value, and the second variable is the unit. SizeBot will be taking in and
+# NOTE: A VUpair is a [Decimal/float, string] pair, where the first variable is
+# the value, and the second variable is the unit. SizeBot will be taking in and
 # outputting these where possible, for consistency.
+# TODO: UPDATE: No we won't. Natalie will be creating a Size object,
+# we will be using that.
 
 
 # Custom exceptions

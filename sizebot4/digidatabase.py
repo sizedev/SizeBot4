@@ -5,6 +5,7 @@ from sizebot4 import logging
 
 
 class User:
+	# TODO: Make slots for all various flags and values planned.
     __slots__ = ("userid", "nick", "display", "currentheight", "chu", "baseheight", "bhu", "baseweight", "bwu", "species")
 
     def __init__(self):
