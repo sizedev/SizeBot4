@@ -5,13 +5,15 @@
     - Switch to using Size objects.
 * Store user database in a database and not a fuckton of txt files.
 * Autostop option for slowchange.
-* Stop using async tasks for slowchange. (Store in a database and read from periodically?)
-* Change the way &slowchange works. [&slowchange <rate>] 
+* Stop using async tasks for slowchange.
+    (Store in a database and read from periodically?)
+* Change the way &slowchange works. [&slowchange <rate>]
 * Add &slowspurt [&slowspurt <rate> <interval>]
 * Auto-role for SizeBot Users.
 * Auto-role based on current size option. [optional for user]
 * Custom emojis trigger events.
-* Option to allow others to change your size. [modes: disable, whitelist, blacklist, all]
+* Option to allow others to change your size.
+    [modes: disable, whitelist, blacklist, all]
     - Allow users to set minimum and maximum sizes of attributes for themselves.
 * Height gambling games (Poker? Uno? Deal or No Deal?)
 * Allow you to compare another user other than yourself with compareraw.
@@ -19,24 +21,32 @@
 * Fix Unicode handling for nicknames.
 * Generate user "cards".
 * Switchable user profiles. [create characters, switch between them]
-* Visual height comparisons.
+* Visual height comparisons. (oh shit oh fuck)
 * Compare yourself to objects of similar size.
-* Customizable body part sizes per character. [foot size, boob size, penis size] (hand, butt, hair length?)
-* RP mode: user flag that deletes setheight, change, and slowchange commands but keeps the output in chat, so it can be used in RP rooms and preserve what size the user was later.
+* Customizable body part sizes per character. [foot size, boob size, penis size]
+    (hand, butt, hair length?)
+* RP mode: user flag that deletes setheight, change, and slowchange commands but
+    keeps the output in chat, so it can be used in RP rooms and preserve what
+    size the user was later.
 * Convert command. [&convert <size> <new unit>]
 * Calculate command. [&calc <equation>] (use an API for this?)
-* "Set height such that" command. e.g.: "set height such that foot length = 1mi", or "set height such that my height = fingerprint depth of someone 500km tall" or "set height such that the hair of someone 6ft looks 50ft thick"
+* "Set height such that" command. e.g.: "set height such that foot length = 1mi"
+    or "set height such that my height = fingerprint depth of someone 500km tall"
+    or "set height such that the hair of someone 6ft looks 50ft thick"
+* "Stats such that", using the logic from setheightsuchthat,
+    but passing it to a stats[raw] command.
 * Even larger sizes? (multiverses?)
 * Actually adhere to PEP8 formatting.
 * Combine &stats/&statsraw and &compare/&compareraw.
+* Allow mods to take control of users' SizeBot [&sudo <user> <command...>]
 
-(† indicate user-customizable)
+(† indicates user-customizable)
 STATS:                       STATSNSFW:
 height†                      penis†
 weight†                      boobs†
 foot†                        butt† (?)
 thumb
-hand
+hand(†?)
 foot area
 hand area
 fingerprint depth
@@ -63,9 +73,14 @@ FULL COMMAND LIST:
 #Stats commands
 &stats <user/size>
 &statsnsfw <user>
-&statsraw [size] #Deprecated.
+&statssuchthat [attribute] [size]
+    OR [attribute] [otheruser/othersize] [otherattribute]
+    OR [attribute] [otheruser/othersize] [otherattribute] [size]
+&statsnsfwsuchthat [attribute] [size]
+    OR [attribute] [otheruser/othersize] [otherattribute]
+    OR [attribute] [otheruser/othersize] [otherattribute] [size]
 &compare [user1/size1] <user2/size2>
-&compareraw [size1] <size2> #Deprecated.
+&comparensfw [user1/size1] <user2/size2>
 
 #Set commands
 &setheight [height]
@@ -78,7 +93,9 @@ FULL COMMAND LIST:
 &setinf
 &setrandom [attribute] [minsize] [maxsize]
 &change [attribute] [style (x,+,-,/)] [amount]
-&setheightsuchthat [attribute] [size] OR [attribute] [othersize] [otherattribute] OR [attribute] [othersize] [otherattribute] [size]
+&setheightsuchthat [attribute] [size]
+    OR [attribute] [otheruser/othersize] [otherattribute]
+    OR [attribute] [otheruser/othersize] [otherattribute] [size]
 &setbaseheight [height]
 &setbaseweight [weight]
 &setbasefoot [foot length]
@@ -90,12 +107,15 @@ FULL COMMAND LIST:
 &setspecies [species]
 &clearspecies
 &toggledisplay
+&togglesystem
 &toggleautorole
 &toggleRPmode
 
 #Slow-change commands
 &slowchange [style] [rate] <stoptype> <stopcondition>
 &slowspurt [style] [rate] [delay] <stoptype> <stopcondition>
+&slowspurtrandom [style] [minspurt] [maxspurt] [mintime] [maxtime]
+    <stoptype> <stopcondition>
 &stopchange
 
 #Set other commands
@@ -124,3 +144,6 @@ FULL COMMAND LIST:
 &showcard <user>
 &roll [XdY]<dZ,kZ,dhZ,klZ>
 &sing [string]
+
+#Mod-only commands
+&sudo [user] [command...]
