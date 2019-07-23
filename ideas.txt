@@ -23,7 +23,7 @@
 * Switchable user profiles. [create characters, switch between them]
 * Visual height comparisons. (oh shit oh fuck)
 * Compare yourself to objects of similar size.
-* Customizable body part sizes per character. [foot size, boob size, penis size]
+* Customizable body part sizes per character. [foot size, boob size, penis size, tail length]
     (hand, butt, hair length?)
 * RP mode: user flag that deletes setheight, change, and slowchange commands but
     keeps the output in chat, so it can be used in RP rooms and preserve what
@@ -37,23 +37,24 @@
     but passing it to a stats[raw] command.
 * Even larger sizes? (multiverses?)
 * Actually adhere to PEP8 formatting.
-* Combine &stats/&statsraw and &compare/&compareraw.
+* Combine &stats/&statsraw and &compare/&compareraw. (done?)
 * Allow mods to take control of users' SizeBot [&sudo <user> <command...>]
 
-(† indicates user-customizable)
+(† indicates user-customizable, ᕁ indicate optional.)
 STATS:                       STATSNSFW:
-height†                      penis†
-weight†                      boobs†
+height†                      penis†ᕁ
+weight†                      boobs†ᕁ
 foot†                        butt† (?)
 thumb
 hand(†?)
 foot area
 hand area
+pointer finger length
 fingerprint depth
 footprint depth (is there an equation for this?)
 hair width
 hair length† (?)
-
+tail†ᕁ
 
 FULL COMMAND LIST:
 #Setup/Help Commands
@@ -89,6 +90,7 @@ FULL COMMAND LIST:
 &sethair [hair length]
 &setboob [boob size]
 &setpenis [penis size]
+&settail [tail length]
 &set0
 &setinf
 &setrandom [attribute] [minsize] [maxsize]
@@ -102,7 +104,8 @@ FULL COMMAND LIST:
 &setbasehair [hair length]
 &setbaseboob [boob size]
 &setbasepenis [penis size]
-&toggle [attribute] (boobs, penis, etc.)
+&setbasetail [tail length]
+&toggle [attribute (boobs/penis/tail)]
 &changenick [nick]
 &setspecies [species]
 &clearspecies
@@ -125,6 +128,7 @@ FULL COMMAND LIST:
 &sethairother [user] [hair length]
 &setboobother [user] [boob size]
 &setpenisother [user] [penis size]
+&settailother [user] [tail length]
 &set0other [user]
 &setinfother [user]
 &setrandomother [user] [attribute] [minsize] [maxsize]
