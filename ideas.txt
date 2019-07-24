@@ -82,6 +82,7 @@ FULL COMMAND LIST:
     OR [attribute] [otheruser/othersize] [otherattribute] [size]
 &compare [user1/size1] <user2/size2>
 &comparensfw [user1/size1] <user2/size2>
+&objectcomparison <user/size>
 
 #Set commands
 &setheight [height]
@@ -105,6 +106,8 @@ FULL COMMAND LIST:
 &setbaseboob [boob size]
 &setbasepenis [penis size]
 &setbasetail [tail length]
+&setcharpic [url]
+&clearcharpic
 &toggle [attribute (boobs/penis/tail)]
 &changenick [nick]
 &setspecies [species]
@@ -148,6 +151,7 @@ FULL COMMAND LIST:
 &showcard <user>
 &roll [XdY]<dZ,kZ,dhZ,klZ>
 &sing [string]
+&schedule [date/time] [command...]
 
 #Mod-only commands
 &sudo [user] [command...]
