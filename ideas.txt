@@ -39,6 +39,10 @@
 * Actually adhere to PEP8 formatting.
 * Combine &stats/&statsraw and &compare/&compareraw. (done?)
 * Allow mods to take control of users' SizeBot [&sudo <user> <command...>]
+* Multi character support (running two characters at once.)
+    - Gives the user two size tags.
+    - Running &stats give stats for both characters.
+* Switch a lot of outputs to embeds.
 
 († indicates user-customizable, ᕁ indicate optional.)
 STATS:                       STATSNSFW:
