@@ -43,6 +43,7 @@
     - Gives the user two size tags.
     - Running &stats give stats for both characters.
 * Switch a lot of outputs to embeds.
+* Image search (DA, giantess/size/gelbooru, pixiv)
 
 († indicates user-customizable, ᕁ indicate optional.)
 STATS:                       STATSNSFW:
@@ -58,6 +59,8 @@ fingerprint depth
 footprint depth (is there an equation for this?)
 hair width
 hair length† (?)
+waist width
+lift strength
 tail†ᕁ
 
 FULL COMMAND LIST:
@@ -144,8 +147,9 @@ FULL COMMAND LIST:
 &slowspurtother [user] [style] [rate] [delay] <stoptype> <stopcondition>
 &stopchangeother [user]
 &allowchangebyothers [on, whitelist, blacklist, off]
-&whitelist [add, remove] [user]
-&blacklist [add, remove] [user]
+&whitelist [add, remove] [user/all]
+&blacklist [add, remove] [user/all]
+    - all is only available for the remove subcommands.
 &setminsize [attribute] [size]
 &setmaxsize [attribute] [size]
 
