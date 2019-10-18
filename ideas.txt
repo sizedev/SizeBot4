@@ -3,7 +3,9 @@
 * Easier, step-by-step register process.
 * Oh God please fix the unit handling. (working on it)
     - Switch to using Size objects.
+    - dunit will fix this.
 * Store user database in a database and not a fuckton of txt files.
+    - MariaDB?
 * Autostop option for slowchange.
 * Stop using async tasks for slowchange.
     (Store in a database and read from periodically?)
@@ -35,7 +37,7 @@
     or "set height such that the hair of someone 6ft looks 50ft thick"
 * "Stats such that", using the logic from setheightsuchthat,
     but passing it to a stats[raw] command.
-* Even larger sizes? (multiverses?)
+* Even larger sizes? (multiverses?) (maybe toggleable per character?)
 * Actually adhere to PEP8 formatting.
 * Combine &stats/&statsraw and &compare/&compareraw. (done?)
 * Allow mods to take control of users' SizeBot [&sudo <user> <command...>]
@@ -44,6 +46,7 @@
     - Running &stats give stats for both characters.
 * Switch a lot of outputs to embeds.
 * Image search (DA, giantess/size/gelbooru, pixiv)
+* Check the stats of a raw height with a custom base height
 
 († indicates user-customizable, ᕁ indicate optional.)
 STATS:                       STATSNSFW:
@@ -79,7 +82,7 @@ FULL COMMAND LIST:
 &deletecharacter
 
 #Stats commands
-&stats <user/size>
+&stats <user/size> <baseheight> <baseweight>
 &statsnsfw <user>
 &statssuchthat [attribute] [size]
     OR [attribute] [otheruser/othersize] [otherattribute]
@@ -89,7 +92,7 @@ FULL COMMAND LIST:
     OR [attribute] [otheruser/othersize] [otherattribute] [size]
 &compare [user1/size1] <user2/size2>
 &comparensfw [user1/size1] <user2/size2>
-&objectcomparison <user/size>
+&objectcompare <user/size> (&objcompare?)
 
 #Set commands
 &setheight [height]
@@ -126,7 +129,7 @@ FULL COMMAND LIST:
 
 #Slow-change commands
 &slowchange [style] [rate] <stoptype> <stopcondition>
-&slowspurt [style] [rate] [delay] <stoptype> <stopcondition>
+&slowspurt [style] [rate] [delay or mindelay/maxdelay] <stoptype> <stopcondition>
 &slowspurtrandom [style] [minspurt] [maxspurt] [mintime] [maxtime]
     <stoptype> <stopcondition>
 &stopchange
@@ -156,7 +159,7 @@ FULL COMMAND LIST:
 #Misc. commands
 &calc [equation]
 &sizecalc [size equation]
-&convert [size] [new unit]
+&convert [measurement] [new unit]
 &showcard <user>
 &roll [XdY]<dZ,kZ,dhZ,klZ>
 &sing [string]
