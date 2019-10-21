@@ -47,6 +47,7 @@
 * Switch a lot of outputs to embeds.
 * Image search (DA, giantess/size/gelbooru, pixiv)
 * Check the stats of a raw height with a custom base height
+* Real error handling (NO DEFAULT TRACEBACKS)
 
 († indicates user-customizable, ᕁ indicate optional.)
 STATS:                       STATSNSFW:
