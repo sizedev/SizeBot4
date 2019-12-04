@@ -1,3 +1,3 @@
 @echo off
-python -m sizebot4
+py -m sizebot4
 pause
