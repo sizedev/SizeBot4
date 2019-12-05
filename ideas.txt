@@ -37,7 +37,6 @@
     or "set height such that the hair of someone 6ft looks 50ft thick"
 * "Stats such that", using the logic from setheightsuchthat,
     but passing it to a stats[raw] command.
-* Even larger sizes? (multiverses?) (maybe toggleable per character?)
 * Actually adhere to PEP8 formatting.
 * Combine &stats/&statsraw and &compare/&compareraw. (done?)
 * Allow mods to take control of users' SizeBot [&sudo <user> <command...>]
